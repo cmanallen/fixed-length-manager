@@ -1,4 +1,4 @@
-class SpaceSeperatedImport(object):
+class CountDelimitedImport(object):
 
 	def __init__(self, uploaded_file, character_list):
 		self.uploaded_file = uploaded_file
@@ -21,8 +21,7 @@ class SpaceSeperatedImport(object):
 		column_object = {}
 
 		for column in column_count:
-			end = position + column
-			column_object[j] = string[position:end:]
+			column_object[j] = string[position:position+column]
 			position += column
 			j += 1
 		
